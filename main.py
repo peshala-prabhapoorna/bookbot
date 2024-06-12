@@ -1,5 +1,11 @@
+import sys
+
+if len(sys.argv) != 2:
+    print("usage: python3 main.py PATH_TO_TEXT_FILE", file=sys.stderr)
+    sys.exit(1)
+
 def main():
-    path = "books/frankenstein.txt"
+    path = sys.argv[1]
     file_contents = read_file(path)
     
     # print stats report
